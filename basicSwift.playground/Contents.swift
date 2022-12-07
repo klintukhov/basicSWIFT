@@ -79,70 +79,10 @@ let filterDeutschAutoLast = deutschAuto.filter { deutschAuto   in // filtration 
 }
 
 print (filterDeutschAutoLast)
-/*
+
+
 // practice 2
- - создать массив "дни в месяцах"
--элементов содержащих количество дней в соответствующем месяце
-используя цикл for и этот массив
-- выведите количество дней в каждом месяце (без имен месяцев)
-- используйте еще один массив с именами месяцев чтобы вывести название месяца + количество дней
-- сделайте тоже самое, но используя массив тюплов с параметрами (имя месяца, кол-во дней)
-- сделайте тоже самое, только выводите дни в обратном порядке (порядок в массиве не меняется)
-- для произвольно выбранной даты (месяц и день) посчитайте количество дней до этой даты от начала года
-4) Создайте массив оценок от 0 до 5 и второй — от 6 до 10. Объедените два массива в один.
-5) Присвойте каждому ученику оценку. Так, чтобы в консоли получилось примерно: «Вася — 5 баллов.Неплохо.».
-6) Создайте массив из чисел. Числа - это купюры в долларах. Посчитать количество денег и вывести в консоль.
-*/
 
-// 1) Создайте массив учеников из 12 мальчиков
-var boysArray: [String] = ["Ihor", "Oleh", "Zhenia", "Vasya", "Andrey", "Sasha", "Misha", "Vitalii", "Ehor", "Denys", "Illia",]
-
-
-//  2) Добавьте 7 девочек: с помощью append и по определённому индексу: см. insert. Выведите результат в консоль.
-var clas = boysArray
-
-clas.append("Zhanna")
-clas.append("Iryna")
-clas.append("Sveta")
-clas.append("Olga")
-clas.insert("Lena", at: 2)
-clas.insert("Vika", at: 4)
-clas.insert("Nastya", at: 2)
-
-// 3) Удалите 7 учеников так, чтобы получилось 5 мальчиков и 5 девочек. См. Удаление по диапазону. Выведите результат в консоль.
-for _ in clas [1...3] {
-    remove
-}
-
-
-
-// 4) Создайте массив оценок от 0 до 5 и второй — от 6 до 10. Объедените два массива в один.
-
-var marksLow = [0, 1, 2, 3, 4, 5]
-var marksHigh = [6, 7, 8, 9, 10,]
-var marksAll = marksLow + marksHigh  // 1y sposob
-marksLow += marksHigh                // 2y sposob
-
-  
-// 5) Присвойте каждому ученику оценку. Так, чтобы в консоли получилось примерно: «Вася — 5 баллов.Неплохо.».
-
-
-
-
-
-
-var markOne = "\(boysArray[1]), your mark is  \(marksHigh[2]), not bad)"
-var markTwo = "\(boysArray[3]), your mark is  \(marksHigh[4]), not bad)"
-var markThree = "\(boysArray[4]), your mark is  \(marksLow[3]), its not good, sorry)"
-
-// 6) Создайте массив из чисел. Числа - это купюры в долларах. Посчитать количество денег и вывести в консоль.
-var dollars = [5, 10, 10, 50, 100, 50 , 100, 100]
-var sum = 0
-for i in dollars {
-    print ("i = (\(i)")
-    sum += 1
-}
- 
 var shoppingList = ["eggs", "milk"]
 print ("The shopping list is \(shoppingList.count)")
 if shoppingList.isEmpty {
@@ -176,3 +116,67 @@ let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
 for (animalName, legCount) in numberOfLegs {
     print("\(animalName)s have \(legCount) legs")
 }
+
+// 1) Создайте массив учеников из 12 мальчиков
+var boysArray: [String] = ["Ihor", "Oleh", "Yevhenii", "Vasya", "Andrey", "Sasha", "Misha", "Vitalii", "Ehor", "Denys", "Illia",]
+
+
+//  2) Добавьте 7 девочек: с помощью append и по определённому индексу: см. insert. Выведите результат в консоль.
+var clas = boysArray
+
+clas.append("Zhanna")
+clas.append("Iryna")
+clas.append("Sveta")
+clas.append("Olga")
+clas.insert("Lena", at: 2)
+clas.insert("Vika", at: 4)
+clas.insert("Nastya", at: 2)
+
+// 3) Удалите 7 учеников так, чтобы получилось 5 мальчиков и 5 девочек. См. Удаление по диапазону. Выведите результат в консоль.
+clas.count
+clas.removeSubrange (0...1); (3...9)
+clas.count
+print(clas)
+
+
+// 4) Создайте массив оценок от 0 до 5 и второй — от 6 до 10. Объедените два массива в один.
+
+var marksLow = [0, 1, 2, 3, 4, 5]
+var marksHigh = [6, 7, 8, 9, 10,]
+var marksAll = marksLow + marksHigh  // 1st way
+marksLow += marksHigh                // 2nd way
+
+  
+// 5) Присвойте каждому ученику оценку. Так, чтобы в консоли получилось примерно: «Вася — 5 баллов.Неплохо.».
+
+marksAll
+var mark = marksAll.randomElement()
+for _ in marksAll{
+}
+
+for students in clas
+{
+    print("Hello \(students) your mark is \(mark!), its not bad")
+
+}
+
+//var markOne = "\(boysArray[1]), your mark is  \(marksHigh[2]), not bad)"  ====== ne pravilno
+
+
+// 6) Создайте массив из чисел. Числа - это купюры в долларах. Посчитать количество денег и вывести в консоль.
+
+
+var dollars = [5, 10, 10, 50, 100, 50 , 100, 100]
+var sum = 0
+
+for dollar in dollars {
+    sum += dollar
+}
+print("you have just \(sum) dollars for tooday")
+
+
+
+
+
+
+
