@@ -62,14 +62,14 @@ deutschAuto.count
 japanAuto.count
 japanAuto.endIndex // indeks poslednego znacheniya
 japanAuto.isEmpty // proverka na pustotu
-print (deutschAuto )
+print(deutschAuto )
 let chuffleDeutschAuto = deutschAuto.shuffled() // creating new value for main array
 deutschAuto.shuffle() // changing main array
-print (deutschAuto)
+print(deutschAuto)
 
 
 // filtrating of array
-var filterDeutschAutoFirst = deutschAuto.filter { deutschAuto   in // filtration array on first letter "b"
+let filterDeutschAutoFirst = deutschAuto.filter { deutschAuto   in // filtration array on first letter "b"
     deutschAuto.first == "b"
 }
  print (filterDeutschAutoFirst)
