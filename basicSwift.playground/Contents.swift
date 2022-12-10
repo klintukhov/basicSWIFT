@@ -13,7 +13,7 @@ if array.count == 0 {
     print ("array is empty")
 }
 if array.isEmpty {
-    print ("array is empty")
+    print("array is empty")
 }
 
 array += constArray
@@ -47,13 +47,13 @@ print (deutschAuto)
 
 // deutschAuto = []
 // deutschAuto.removeAll() removing all elements of array
-print (deutschAuto)
+print(deutschAuto)
 
 deutschAuto.removeFirst() // removing the first element of array
 print(deutschAuto)
 
 deutschAuto.removeLast() // removing the last element of array
-print (deutschAuto )
+print(deutschAuto )
 
 let japanAuto = ["honda", "toyota", "nissan", "suzuki"]
 
@@ -72,13 +72,13 @@ print(deutschAuto)
 let filterDeutschAutoFirst = deutschAuto.filter { deutschAuto   in // filtration array on first letter "b"
     deutschAuto.first == "b"
 }
- print (filterDeutschAutoFirst)
+ print(filterDeutschAutoFirst)
 
 let filterDeutschAutoLast = deutschAuto.filter { deutschAuto   in // filtration array on last letter "a"
     deutschAuto.last == "a"
 }
 
-print (filterDeutschAutoLast)
+print(filterDeutschAutoLast)
 
 
 // practice 2
@@ -86,9 +86,9 @@ print (filterDeutschAutoLast)
 var shoppingList = ["eggs", "milk"]
 print ("The shopping list is \(shoppingList.count)")
 if shoppingList.isEmpty {
-    print ("the shopping list is empty")
+    print("the shopping list is empty")
 } else {
-    print ("not empty")
+    print("not empty")
 }
 
 shoppingList.append("flour")
@@ -108,7 +108,7 @@ for index in shoppingList {
 print (index)
 }
 for (index , value) in shoppingList.enumerated() {
-    print ("Item \(index + 1) : \(value)")
+    print("Item \(index + 1) : \(value)")
 }
 
 
