@@ -11,18 +11,18 @@ var str = "Hello, playground"
 
 // Practice part 1
 
-let dict : [Int : String] = [0 : "mama" , 1 : "papa"]
+let dict : [Int: String] = [0 : "mama" , 1 : "papa"]
 // let Dictionary : <String, Double> = ["papa" : 23.0] =======> Generic
-let dict1 = [0 : "mama" , 1 : "papa"]
+let dict1 = [0: "mama" , 1: "papa"]
 
-let names = ["papa" : "Pavel", "mama" : "Iryna"]
+let names = ["papa": "Pavel", "mama": "Iryna"]
 names["papa"] // calling value "Pavel" wit key "papa"
 
-var namesOfIntegers = [Int : String]()
+var namesOfIntegers = [Int: String]()
 namesOfIntegers.count
 namesOfIntegers.isEmpty
 
-var dictionary = ["car" : "mercedes", "phone" : "iphone"]
+var dictionary = ["car": "mercedes", "phone": "iphone"]
 dictionary.count
 dictionary.isEmpty
 
@@ -60,36 +60,36 @@ for value in dictionary.values {  // === vuvud value
 
 
 //
-var dOne = [1 : 1, 2 : 2, 3 : 3]
+var dOne = [1: 1, 2: 2, 3: 3]
 //
-var dTwo = ["a" : 1, "b" : 2, "c" : 3, "d" : 2, "e" : 4,]
+var dTwo = ["a": 1, "b": 2, "c": 3, "d": 2, "e": 4,]
 //
-var dThree = ["japan" : "tokio", "france" : "paris", "deutschland" : "berlin", "england" : "London"]
+var dThree = ["japan": "tokio", "france": "paris", "deutschland": "berlin", "england": "London"]
 //
-var floatNumbers  = [4 : 1.22,  5 : 1.23, 6 : 1.24, 7 : 1.25 ]
+var floatNumbers  = [4: 1.22,  5: 1.23, 6: 1.24, 7: 1.25 ]
 for (key, value)in floatNumbers {
     print("the value  of \(key) number is \(value)")
 }
 //
-var schools = ["school#1" : "centr", "school#2" : "south", "school#3" : "west"]
+var schools = ["school#1": "centr", "school#2": "south", "school#3": "west"]
 for (key, value) in schools {
-    print ("\(key), in the  \(value) part of the city")
+    print("\(key), in the  \(value) part of the city")
 }
 
 //
-var days = ["year" : 365, "month" : 30, "week" : 7]
+var days = ["year": 365, "month": 30, "week": 7]
 
 for day in days {
-    print (day)
+    print(day)
 }
 
 //
-var monthEng = [ 1 : "january ", 2 : "february", 3 : "march", 4 : "april", 5 : "may", 6 : "june", 7 : "July", 8 : "august", 9 : "september", 10 : "november", 11 : "december", 12 : "january"]
+var monthEng = [ 1: "january ", 2: "february", 3: "march", 4: "april", 5: "may", 6: "june", 7: "July", 8: "august", 9: "september", 10: "november", 11: "december", 12: "january"]
 
 for (key, value) in monthEng {
-    print ("the name of \(key)th month is \(value)")
+    print("the name of \(key)th month is \(value)")
 }
-var monthRus = [ 1 : "январь ", 2 : "февраль", 3 : "март", 4 : "апрель", 5 : "май", 6 : "июнь", 7 : "июль", 8 : "август", 9 : "сентябрь", 10 : "октябрь", 11 : "ноябрь", 12 : "декабрь"]
+var monthRus = [ 1: "январь ", 2: "февраль", 3: "март", 4: "апрель", 5: "май", 6: "июнь", 7: "июль", 8: "август", 9: "сентябрь", 10: "октябрь", 11: "ноябрь", 12: "декабрь"]
 
 for (key, value) in monthRus {
     print ("имя \(key)го месяцв -  \(value)")
@@ -97,17 +97,17 @@ for (key, value) in monthRus {
 
 //2 Создайте пустой Dictionary и через условный оператор if проверьте пустой он или нет если пустой то в условии добавьте в него пару значений􏰀
 
-var emptyDict = [Int : String] ()
+var emptyDict = [Int: String] ()
 if emptyDict.isEmpty {
     emptyDict[2] = "two"
 }
 for (key, value) in emptyDict {
-    print ("the value of key # \(key) is \(value)")
+    print("the value of key # \(key) is \(value)")
 }
 
 //3 Cоздайте словарь — ключ: «иномарка», «значение»: название машины.
 
-var auto = ["import" : "honda"]
+var auto = ["import": "honda"]
 
 // Добавьте в него значение по ключу - «отечественная». Распечатайте ключи и значения в консоль. Затем отдельно только значения.
 
@@ -116,18 +116,18 @@ auto["domestic"] = "vaz"
 //Распечатайте ключи и значения в консоль.
 
 for (key, value) in auto {
-    print ("the \(key) is \(value)")
+    print("the \(key) is \(value)")
 }
 
 // Затем отдельно только значения.
 
 for value in auto.values {
-    print (value)
+    print(value)
 }
 
 //Удалите из словаря иномарку по ключу (двумя способами: через nil и removeValue().
 
-auto.removeValue(forKey: "import")  // v1
+auto.removeValue(forKey:"import")  // v1
 auto["import"] = nil                // v2
 
 //4 Создайте словарь, где ключ — фамилия солдата, а значение — его приветствие.
@@ -140,6 +140,12 @@ for surname in greeting.keys {
 }
 
 // Сделайте тоже самое со значениями и распечатайте приветствие каждого солдата.
-for greet in greeting.values {
+
+
+for greet in greeting.values {  // var 1
     print (greet)
+}
+
+for ((key), value) in greeting {  // var 2
+    print("greeting for soldier : \(key), - \(value)")
 }
