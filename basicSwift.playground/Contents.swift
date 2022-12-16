@@ -64,15 +64,15 @@ if var oranges = apples {  // Optional banding
 
 // 1) Создать 5 констант со СТРОКАМИ которые содержат цифры и посчитайте их используя новые инструменты.
 
-let stOne: String? = "10"
+let stOne: String = "10"
 
-let stTwo: String? = "5"
+let stTwo: String = "5"
 
-let stThree: String?  = "15"
+let stThree: String  = "15"
 
-let stFour: String? = "20"
+let stFour: String = "20"
 
-let stFive: String? = "30"
+let stFive: String = "30"
 
 var sumLets = Int(stOne)! + Int(stTwo)! + Int(stThree)! + Int(stFour)! + Int(stFive)!
 if sumLets != nil {
@@ -102,4 +102,11 @@ let number: Float = 232.2324242424
 var myName = "Grigoriy"
 for name in myName {
     print(name)
+}
+
+// 5) Создайте массив с возрастом всех членов вашей семьи и распечатайте в консоли через цикл for.
+
+let family: [(String, Int)] = [("papa", 60), ("mama", 54), ("brat", 25)]
+for (member, age) in family{
+    print(age)
 }
