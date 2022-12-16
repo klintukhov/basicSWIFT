@@ -64,15 +64,15 @@ if var oranges = apples {  // Optional banding
 
 // 1) Создать 5 констант со СТРОКАМИ которые содержат цифры и посчитайте их используя новые инструменты.
 
-let stOne = "10"
+let stOne: String? = "10"
 
-let stTwo = "5"
+let stTwo: String? = "5"
 
-let stThree = "15"
+let stThree: String?  = "15"
 
-let stFour = "20"
+let stFour: String? = "20"
 
-let stFive = "30"
+let stFive: String? = "30"
 
 var sumLets = Int(stOne)! + Int(stTwo)! + Int(stThree)! + Int(stFour)! + Int(stFive)!
 if sumLets != nil {
