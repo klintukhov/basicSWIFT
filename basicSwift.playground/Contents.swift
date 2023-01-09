@@ -73,7 +73,7 @@ var marks = [2 : "number two", 3 : "number three"]
 func showMark(keyDict: Int ) -> [Int:String] {
     
     let keyDict = marks
-    for elements in marks {
+    for element in marks {
         print(marks.keys)
     }
     return marks
