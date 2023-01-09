@@ -132,7 +132,7 @@ var sortX = arrayNumb.sorted(by: arraySort)
 //6) Написать функцию, которая принимает массив, проверяет — пустой или нет. И если пустой — нужно записать туда значения.
 
 
-var newArray = [1,2,4]
+var newArray = [1, 2, 4]
 
 func elemArray(myArray: [Int]) {
     if newArray.isEmpty {
