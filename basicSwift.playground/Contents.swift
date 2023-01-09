@@ -93,7 +93,7 @@ func addArray(arrayI: [Int], arrayS: [String]) {
     if arrayInt.isEmpty {
         arrayInt.append(3)
     }
-    if    arrayStr.isEmpty {
+    if arrayStr.isEmpty {
         arrayStr.append(contentsOf: ["a", "c"])
     }
 }
