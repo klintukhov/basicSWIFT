@@ -100,7 +100,7 @@ class Human {
 
 //2. Создать sub class (наследники) "повар", "менеджер", "борец" и переопределить метод "say(говорит)" в каждом из этих классов.
 
-class Cock: (Human)  {
+class Cock: Human  {
     override func say() -> String {
         return ("Hello i'am a cock!")
         
@@ -113,7 +113,6 @@ class Manager: Human {
     
     override func say() -> String {
         return ("Hello i'am a manager!")
-        
     }
 }
 
@@ -137,11 +136,11 @@ manager.name = "Oleg"
 var fighter = Fighter()
 fighter.name = "Yaroslav"
 
-var allHumans = [human, cock, manager, fighter]
+var humans = [human, cock, manager, fighter]
 
 //4. В цикле “for in” пройти по всем элементам массива и вывести в консоль все характеристики каждого объекта (имя, рост и тд) и у каждого вызвать метод "say(говорит)".
 
-for human in allHumans {
+for human in humans {
     
     print(human.name, human.height, human.veight, human.sex, human.say())
     human.say()
@@ -167,10 +166,10 @@ class NewHuman: Human {
 var newHuman = NewHuman()
 
 
-allHumans.append(newHuman)
-allHumans
+humans.append(newHuman)
+humans
 
-for human in allHumans {
+for human in humans {
     newHuman.skill
 }
 newHuman.say()
@@ -179,9 +178,9 @@ newHuman.say()
 
 
 // Pereproverit'
-var reversedArraay = allHumans.enumerated().reversed()
+var reversedArraay = humans.enumerated().reversed()
 
-for (index, value) in reversedArraay {
+for (_, value) in reversedArraay {
     
     print(value.name)
 }
@@ -226,21 +225,24 @@ class AlienTwo: Marsian {
     
 }
 
+var marsian = Marsian(name: "AA", colour: "", countHands: 0)
+
 var alienOne = AlienOne(name: "Alf-031", colour: "Brown", countHands: 4)
 var alienTwo = AlienTwo(name: "Alf-052", colour: "Violet", countHands: 6)
 
-var marsian = Marsian(name: "AA", colour: "", countHands: 0)
 
 //10. Объединить всех people и Марсианинов) в один массив.
 
-var humansAndMarsians = [ human, cock, manager, fighter, alienOne, alienTwo ] as [Any]
+var humansAndMarsians: [Any] = [ human, cock, manager, fighter, alienOne, alienTwo ]
 
 //11. В цикле выводить тип объекта (People или Марсианин) перед тем как выводить его свойства и вызывать метод
 
 for object in humansAndMarsians {
     if object is Human {
-        print("There are \(human)")
-    } else if object is Marsian  {
-        print("There are \(marsian)")
+        let object = object as! Human
+        print("There are  \(human) and there names are \(human.name), the human height is \(human.height)")
+    } else if object is Marsian {
+        let object = object as! Marsian
+        print("There are \(marsian) and his name is\(marsian.name), and their color is \(marsian.colour)")
     }
 }
