@@ -127,16 +127,16 @@ class Fighter: Human {
 
 //3. Создать по одному объекту(экземпляру) каждого класса и объединить их в массив.
 
-var human = Human()
-var cock = Cock()
+let human = Human()
+let cock = Cock()
 cock.name = "Andrey"
-var manager = Manager()
+let manager = Manager()
 manager.name = "Oleg"
 
-var fighter = Fighter()
+let fighter = Fighter()
 fighter.name = "Yaroslav"
 
-var humans = [human, cock, manager, fighter]
+let humans = [human, cock, manager, fighter]
 
 //4. В цикле “for in” пройти по всем элементам массива и вывести в консоль все характеристики каждого объекта (имя, рост и тд) и у каждого вызвать метод "say(говорит)".
 
@@ -151,7 +151,7 @@ for human in humans {
 //6. Метод "say(говорит)" реализовать таким образом, чтобы перед тем как выполнить собственный method say, выполнялся сначала метод say класса People.
 
 
-class NewHuman: Human {
+final class NewHuman: Human {
     
     var tatoo = true
     var skill = "hand walking"
@@ -163,7 +163,7 @@ class NewHuman: Human {
 }
 
 
-var newHuman = NewHuman()
+let newHuman = NewHuman()
 
 
 humans.append(newHuman)
@@ -178,7 +178,7 @@ newHuman.say()
 
 
 // Pereproverit'
-var reversedArraay = humans.enumerated().reversed()
+let reversedArraay = humans.enumerated().reversed()
 
 for (_, value) in reversedArraay {
     
@@ -207,8 +207,7 @@ class Marsian {
 
 
 //9. Унаследоваться от него и создать пару других классов (Инопланетян) с переопределенным методом "say".
-
-class AlienOne: Marsian {
+final class AlienOne: Marsian {
     
     override func alienSay() -> String {
         return(super.alienSay() + "Alf-001")
@@ -217,7 +216,7 @@ class AlienOne: Marsian {
 }
 
 
-class AlienTwo: Marsian {
+final class AlienTwo: Marsian {
     
     override func alienSay() -> String {
         return(super.alienSay() + "Alf-002")
@@ -225,15 +224,15 @@ class AlienTwo: Marsian {
     
 }
 
-var marsian = Marsian(name: "AA", colour: "", countHands: 0)
+let marsian = Marsian(name: "AA", colour: "", countHands: 0)
 
-var alienOne = AlienOne(name: "Alf-031", colour: "Brown", countHands: 4)
-var alienTwo = AlienTwo(name: "Alf-052", colour: "Violet", countHands: 6)
+let alienOne = AlienOne(name: "Alf-031", colour: "Brown", countHands: 4)
+let alienTwo = AlienTwo(name: "Alf-052", colour: "Violet", countHands: 6)
 
 
 //10. Объединить всех people и Марсианинов) в один массив.
 
-var humansAndMarsians: [Any] = [ human, cock, manager, fighter, alienOne, alienTwo ]
+let humansAndMarsians: [Any] = [ human, cock, manager, fighter, alienOne, alienTwo ]
 
 //11. В цикле выводить тип объекта (People или Марсианин) перед тем как выводить его свойства и вызывать метод
 
