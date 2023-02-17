@@ -228,12 +228,10 @@ class PersonMan {
     var passport: Passport!
     
     
-    
     init(name: String, passNumber: String, number: Passport) {
         self.name = name
         self.passNumber = passNumber
     }
-    
 }
 
 class Passport {
@@ -245,3 +243,4 @@ class Passport {
         print("Man loosed a passport")
     }
 }
+
